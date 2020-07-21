@@ -1,0 +1,114 @@
+table, th, td {
+    padding: 10px;
+    border-collapse: collapse;
+}
+
+th, td {
+    /* border: 1px solid black; */
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.form-popup {
+    display: none;
+    position: fixed;
+    top: 25%;
+    left: 25%;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+}
+
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+}
+
+/*Full width inout boxes*/
+.form-container input[type=text] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    box-sizing: border-box;
+}
+
+.form-container input[type=radio] {
+   width: 10%;
+   padding: 15px;
+   margin: 5px 0 22px 0;
+   border: none;
+   background: #f1f1f1;
+   box-sizing: border-box;
+}
+
+/*When inputs are in focus, change background color*/
+.form-container input[type=text]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.form-container .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.form-container .cancel {
+    background-color: red;
+}
+
+.form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+}
+
+.btn {
+    background-color: tomato;
+}
+
+header {
+   padding: 2%;
+   text-align: center;
+   background: #1abc9c;
+   color: whitesmoke;
+   font-size: 30px;
+}
+
+#myTable {
+   margin-left: auto;
+   margin-right: auto;
+}
+
+body {
+   background-color: white;
+}
+
+tr:nth-child(even) {
+   /* background-color: rosybrown; */
+}
+
+#add-book {
+   margin: auto;
+   width: 50%;
+   padding: 15px;
+   text-align: center;
+}
+
+tr div {
+   position: absolute;
+   /* top: 0; */
+   /* right: 0px; */
+   background: rgba(255,255,255,0.6);
+   width: 40px;
+   text-align: center;
+   padding: 10px 0;
+   font-weight:  bold;
+   cursor:  pointer;
+   color: rgba(255, 0, 0, 0.7)
+}

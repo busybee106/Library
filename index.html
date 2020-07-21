@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Book Case</title>
+</head>
+
+<header>
+    <h1>Both Ends Library</h1>
+    <!-- <p>Check out our books booooiiii</p> -->
+</header>
+
+<body>
+
+   <table id="myTable">
+      <th>Book</th>
+      <th>Author</th>
+      <th>Pages</th>
+      <th>Have Read?</th>
+      <th>Toggle<br> Read Status</th>
+      <!-- <th>Delete</th> -->
+   </table>
+
+   <div id="add-book"><button onclick="openForm()">Add Book</button></div>
+
+    <div class="form-popup" id="book-form">
+        <form id="myForm" class="form-container">
+            <h1>Add new book</h1>
+
+            <label for="book"><b>Book</b></label>
+            <input type="text" placeholder="Name of book" id="book" name="book" required>
+
+            <label for="author"><b>Author</b></label>
+            <input type="text" placeholder="Author name" id="author" name="author" required>
+
+            <label for="pages"><b>Pages</b></label>
+            <input type="text" placeholder="# of pages" id="pages" name="pages" required>
+
+            <p><b>Have you read this book?</b></p>
+            <input type="radio" name="status" value="Yes">
+            <label for="read">Yes</label><br>
+            <input type="radio" name="status" value="No">
+            <label for="notRead">No</label><br>
+            
+
+            <button class="btn" onclick="closeForm()">Save book</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+        </form>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-firestore.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDPZSLSUEUdy2wMuZzvIBzyZKszbHFgOJ0",
+    authDomain: "library-f9dec.firebaseapp.com",
+    databaseURL: "https://library-f9dec.firebaseio.com",
+    projectId: "library-f9dec",
+    storageBucket: "library-f9dec.appspot.com",
+    messagingSenderId: "231850918984",
+    appId: "1:231850918984:web:ef84e49aae2b5ebaa1847d",
+    measurementId: "G-5P5Q5GWXVK"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  const database = firebase.firestore();
+</script>
+
+   <script src="script.js"></script>
+</body>
+
+
+</html>
